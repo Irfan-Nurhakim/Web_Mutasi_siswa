@@ -4,8 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Login E_Mutasi</title>
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+            crossorigin="anonymous">
         <style>
             .bd-placeholder-img {
                 font-size: 1.125rem;
@@ -63,29 +67,21 @@
                 transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
-            .form-signin:active {
-                background-color: white !important;
-                color: #007bff !important;
-            }
-
             .btn-primary {
                 transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
-            .btn-primary:active {
-                background-color: white !important;
-                color: #007bff !important;
-            }
+            
         </style>
     </head>
 
     <body class="d-flex align-items-center justify-content-center vh-100 bg-body-tertiary">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center rounded">
                 <div class="shadow col-md-4 text-center rounded">
                     <main class="form-signin w-100 m-auto">
-                        <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
-                            <h1 class="h3 mb-3" style="padding-bottom: 20px;">LOGIN</h1>
+                        <form class="needs-validation" novalidate action="/dashboard">
+                            <h1 class="h3 mb-3" style="padding-bottom: 20px;"><br>LOGIN</h1>
                             <div class="form-floating mb-3">
                                 <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                                 <label for="floatingInput">Email address</label>
@@ -102,8 +98,8 @@
                             </div>
 
                             <div class="text-center">
-                                <button class="btn btn-primary w-100 py-2" type="submit" name="submit-validate" value="abc">Login</button>
-                                <p class="mt-5 mb-2 text-body-secondary"> &copy; 2023–2024</p>
+                                <button class="btn btn-primary w-50 py-2 mb-2" type="submit" name="submit-validate" value="abc">Login</button>
+                                
                             </div>
 
                             <div class="text-center" style="margin-top: 30px;">
@@ -112,7 +108,7 @@
 
                         </form>
                     </main>
-
+                    <p class="mt-5 mb-2 text-body-secondary"> &copy; 2023–2024</p>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
                 </div>
             </div>
