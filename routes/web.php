@@ -8,9 +8,6 @@ Route::get('/', function () {
 Route::get('/mutasi', function () {
     return view('mutasi');
 });
-Route::get('/contac', function () {
-    return view('contac');
-});
 Route::get('/login', function () {
     return view('login');
 });

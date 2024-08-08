@@ -102,10 +102,6 @@
                                 
                             </div>
 
-                            <div class="text-center" style="margin-top: 30px;">
-                                Belum Punya Akun Silahkan <a href="Daftar.php">Daftar <br></a>
-                            </div>
-
                         </form>
                     </main>
                     <p class="mt-5 mb-2 text-body-secondary"> &copy; 2023–2024</p>
