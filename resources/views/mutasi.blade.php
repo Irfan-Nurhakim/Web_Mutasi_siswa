@@ -49,32 +49,48 @@
                 width: 100%;
             }
         }
+
+        .nav-link {
+        transition: all 0.3s ease;
+        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg text-bg-secondary sticky-top" style="background-color: #e3f2fd;">
-        <div class="container">
-            <a class="navbar-brand" href="/">E Mutasi Siswa</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="bi bi-house-door-fill"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/mutasi"><i class="bi bi-journal-bookmark"></i> Mutasi</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login"><i class="bi bi-box-arrow-right"></i> Login</a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-expand-lg text-bg-secondary sticky-top" style="background-color: #e3f2fd;">
+            <div class="container">
+                <a class="navbar-brand" href="/">E Mutasi Siswa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link rounded" href="/"> <i class="bi bi-house-door-fill"> </i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded" href="/mutasi"><i class="bi bi-journal-bookmark"> </i>Mutasi</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link rounded" href="/login"><i class="bi bi-box-arrow-right"> </i>Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+            <script>
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+            </script>
+        </nav>
     
     <div class="container mt-2">
         <h1 class="mb-4">Halaman Mutasi</h1>

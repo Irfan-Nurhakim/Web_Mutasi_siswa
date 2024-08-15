@@ -56,23 +56,30 @@
                 position: fixed;
                 top: 56px;
                 bottom: 0;
-                left: 0;
+                left: -100%;
                 z-index: 100;
                 padding: 20px 0 0;
                 overflow-x: hidden;
                 overflow-y: auto;
                 width: 100%;
                 max-width: 200px;
-                transform: translateX(-100%);
-                transition: transform .3s ease-in-out;
+                transition: left .3s ease-in-out;
             }
 
             .sidebar.show {
-                transform: translateX(0);
+                left: 0;
             }
 
             .content-wrapper {
                 margin-left: 0;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+            }
+            
+            .table th, .table td {
+                white-space: nowrap;
             }
         }
 
@@ -88,11 +95,18 @@
             }
         }
 
-        /* Gaya yang sudah ada tetap dipertahankan */
         .table th {
             white-space: nowrap;
             vertical-align: middle;
             text-align: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -106,23 +120,17 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item d-lg-none">
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="/dashboard"><i class="bi bi-speedometer"></i> Dashboard</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link" href="/home"><i class="bi bi-speedometer"></i> Home</a>
-                        </li>
+                        <a class="nav-link" href="/dashboard"><i class="bi bi-speedometer"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="/home"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="/data"><i class="bi bi-folder2-open"></i> Data</a>
                     </li>
                     <li class="nav-item me-3">
                         <a class="nav-link" href="#" onclick="konfirmasiLogout()"><i class="bi bi-door-open" style="font-size: 25px;"></i> Logout</a>
                     </li>
-                    <script>
-                    function konfirmasiLogout() {
-                        if (confirm("Apakah Anda yakin ingin keluar?")) {
-                            window.location.href = "/login";
-                        }
-                    }
-                    </script>
                 </ul>
             </div>
         </div>
@@ -131,7 +139,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-none d-md-block sidebar">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -146,35 +154,17 @@
                     </ul>
                 </div>
             </nav>
-            <style>
-                .nav-link {
-                    transition: all 0.3s ease;
-                }
-                .nav-link:hover, .nav-link:focus, .nav-link.active {
-                    background-color: rgba(255, 255, 255, 0.1);
-                    transform: scale(1.05);
-                }
-            </style>
-            <script>
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', function() {
-                        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                    });
-                });
-            </script>
             
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="container-fluid">
-                    <div class="d-flex justify-content-between align-items-center my-3">
+                    <div class="d-flex justify-content-between align-items-center my-3 flex-wrap">
                         <h1 class="my-4">Data Mutasi Siswa</h1>
-                        <a href="{{ route('data.export') }}" class="btn btn-primary">Ekspor ke Excel</a> <!-- Tombol Ekspor diubah menjadi warna biru -->
+                        <a href="{{ route('data.export') }}" class="btn btn-primary mt-2 mt-md-0">Ekspor ke Excel</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
-                        <thead>
-                        <thead>
+                            <thead>
                                 <tr>
                                     <th>No</th>
                                     <th>Tanggal</th>
@@ -195,7 +185,7 @@
                                     <th>No.Telp</th>
                                     <th>Email</th>
                                     <th>Keterangan</th>
-                                    <th>Aksi</th> <!-- Tambahkan kolom aksi -->
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -222,25 +212,27 @@
                                         <td>{{ $data->email }}</td>
                                         <td>{{ $data->keterangan }}</td>
                                         <td>
-                                            <a href="{{ route('siswa.detail', $data->id) }}" class="btn btn-info btn-sm">
-                                                <i class="bi bi-eye"></i> <!-- Ikon untuk melihat -->
-                                            </a>
-                                            <a href="{{ route('siswa.edit', $data->id) }}" class="btn btn-warning btn-sm">
-                                                <i class="bi bi-pencil"></i> <!-- Ikon untuk mengedit -->
-                                            </a>
-                                            <form action="{{ route('siswa.destroy', $data->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data siswa ini?');">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger btn-sm">
-                                                    <i class="bi bi-trash"></i> <!-- Ikon untuk menghapus -->
-                                                </button>
-                                            </form>
+                                            <div class="btn-group" role="group">
+                                                <a href="{{ route('siswa.detail', $data->id) }}" class="btn btn-info btn-sm">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ route('siswa.edit', $data->id) }}" class="btn btn-warning btn-sm">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <form action="{{ route('siswa.destroy', $data->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data siswa ini?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                     @endforeach
                                 @else
                                     <tr>
-                                        <td colspan="18" class="text-center">Tidak ada data mutasi yang tersedia.</td>
+                                        <td colspan="20" class="text-center">Tidak ada data mutasi yang tersedia.</td>
                                     </tr>
                                 @endif
                             </tbody>
@@ -248,16 +240,26 @@
                     </div>
                 </div>
             </main>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e3f2fd" fill-opacity="1" d="M0,64L60,85.3C120,107,240,149,360,144C480,139,600,85,720,90.7C840,96,960,160,1080,160C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        </div>
+        <div class="position-fixed bottom-0 start-0 w-100">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="width: 100%; height: auto;"><path fill="#e3f2fd" fill-opacity="1" d="M0,64L60,85.3C120,107,240,149,360,144C480,139,600,85,720,90.7C840,96,960,160,1080,160C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
-        const logout = (event) => {
-            window.location.href = '/login';
+        function konfirmasiLogout() {
+            if (confirm("Apakah Anda yakin ingin keluar?")) {
+                window.location.href = "/login";
+            }
         }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
     </script>
 </body>
 </html>
