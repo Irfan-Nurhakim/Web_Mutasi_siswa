@@ -23,30 +23,6 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg text-bg-secondary sticky-top" style="background-color: #e3f2fd;">
-            <div class="container">
-                <a class="navbar-brand" href="/">E Mutasi Siswa</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/"> <i class="bi bi-house-door-fill"> </i> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/mutasi"><i class="bi bi-journal-bookmark"> </i>Mutasi</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/login"><i class="bi bi-box-arrow-right"> </i>Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
         <div class="card mt-4 bg-light link-dark container">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="max-width: 100%; margin: auto;">
                 <div class="carousel-indicators">
