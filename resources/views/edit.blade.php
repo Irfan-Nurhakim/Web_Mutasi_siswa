@@ -34,10 +34,7 @@
             </div>
             <div class="mb-3">
                 <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
-                    <option value="1" {{ $siswa->jenis_kelamin == 1 ? 'selected' : '' }}>Laki-laki</option>
-                    <option value="2" {{ $siswa->jenis_kelamin == 2 ? 'selected' : '' }}>Perempuan</option>
-                </select>
+                <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin" value="{{ $siswa->jenis_kelamin }}" required>
             </div>
             <div class="mb-3">
                 <label for="nis" class="form-label">NIS</label>

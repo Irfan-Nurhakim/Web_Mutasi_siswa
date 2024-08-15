@@ -60,37 +60,37 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg text-bg-secondary sticky-top" style="background-color: #e3f2fd;">
-            <div class="container">
-                <a class="navbar-brand" href="/">E Mutasi Siswa</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link rounded" href="/"> <i class="bi bi-house-door-fill"> </i> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded" href="/mutasi"><i class="bi bi-journal-bookmark"> </i>Mutasi</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link rounded" href="/login"><i class="bi bi-box-arrow-right"> </i>Login</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg text-bg-secondary sticky-top" style="background-color: #e3f2fd;">
+        <div class="container">
+            <a class="navbar-brand" href="/">E Mutasi Siswa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link rounded" href="/"> <i class="bi bi-house-door-fill"> </i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded" href="/mutasi"><i class="bi bi-journal-bookmark"> </i>Mutasi</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link rounded" href="/login"><i class="bi bi-box-arrow-right"> </i>Login</a>
+                    </li>
+                </ul>
             </div>
-            <script>
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', function() {
-                        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                    });
+        </div>
+        <script>
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
                 });
-            </script>
-        </nav>
+            });
+        </script>
+    </nav>
     
     <div class="container mt-2">
         <h1 class="mb-4">Halaman Mutasi</h1>
@@ -148,10 +148,7 @@
                 </div>
                 <div class="col-md-6">
                     <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                    <select class="form-select" id="jenis_kelamin" name="jenis_kelamin">
-                        <option value="0">Laki-laki</option>
-                        <option value="1">Perempuan</option>
-                    </select>
+                    <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin">
                 </div>
                 <div class="col-md-6">
                     <label for="nis" class="form-label">NIS</label>
