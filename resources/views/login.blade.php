@@ -31,13 +31,19 @@
         .btn-primary {
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
+
+        @media (max-width: 768px) {
+            .form-signin {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body class="d-flex align-items-center justify-content-center vh-100 bg-body-tertiary">
     <div class="container">
         <div class="row justify-content-center rounded">
-            <div class="shadow col-md-4 text-center rounded">
+            <div class="shadow col-md-6 col-lg-4 text-center rounded">
                 <main class="form-signin w-100 m-auto">
                     <form class="needs-validation" novalidate action="{{ route('login') }}" method="POST">
                         @csrf

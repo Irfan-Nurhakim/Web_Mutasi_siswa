@@ -9,13 +9,14 @@ use App\Http\Controllers\SiswaController;
 use App\Exports\SiswaExport;
 use Maatwebsite\Excel\Facades\Excel;
 
+
 // Halaman Utama
 Route::get('/', function () {
     return view('home');
 });
 
 // Halaman Mutasi
-Route::get('/mutasi', [MutasiController::class, 'index'])->name('mutasi.index');
+// Route::get('/mutasi', [MutasiController::class, 'index'])->name('mutasi.index');
 Route::post('/mutasi', [MutasiController::class, 'store'])->name('mutasi.store');
 
 // Halaman Autentikasi
@@ -28,9 +29,10 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 
 // Halaman Dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/mutasi', function () {
+    return view('mutasi');
 });
+Route::get('/dashboard', [MutasiController::class, 'index'])->name('dashboard');
 
 // Halaman Data
 Route::get('/data', [DataController::class, 'index'])->name('data.index');

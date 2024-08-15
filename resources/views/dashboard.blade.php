@@ -87,6 +87,14 @@
                 margin-left: 200px;
             }
         }
+
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -133,15 +141,6 @@
                     </ul>
                 </div>
             </nav>
-            <style>
-                .nav-link {
-                    transition: all 0.3s ease;
-                }
-                .nav-link:hover, .nav-link:focus, .nav-link.active {
-                    background-color: rgba(255, 255, 255, 0.1);
-                    transform: scale(1.05);
-                }
-            </style>
             <script>
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.addEventListener('click', function() {
@@ -159,7 +158,7 @@
                         <div class="col-12 col-md-3 mb-4">
                             <div class="card bg-primary text-white">
                                 <div class="card-body">
-                                    <h5 class="card-title">Total Mutasi</h5>
+                                    <h5 class="card-title"><i class="bi bi-bar-chart"></i> Total Mutasi</h5>
                                     <p class="card-text display-4">{{ $totalMutasi ?? 0 }}</p>
                                 </div>
                             </div>
@@ -167,7 +166,7 @@
                         <div class="col-12 col-md-3 mb-4">
                             <div class="card bg-success text-white">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mutasi Masuk</h5>
+                                    <h5 class="card-title"><i class="bi bi-arrow-down-circle"></i> Mutasi Masuk</h5>
                                     <p class="card-text display-4">{{ $mutasiMasuk ?? 0 }}</p>
                                 </div>
                             </div>
@@ -177,7 +176,7 @@
                         <div class="col-12 mb-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Grafik Mutasi Bulanan</h5>
+                                    <h5 class="card-title"><i class="bi bi-graph-up"></i> Grafik Mutasi Bulanan</h5>
                                     <canvas id="mutasiChart"></canvas>
                                 </div>
                             </div>
@@ -200,16 +199,16 @@
 
     // Data untuk grafik (ganti dengan data sebenarnya dari backend)
     const mutasiData = {
-        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni'],
+        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
         datasets: [{
             label: 'Total Mutasi',
-            data: [19, 30, 8, 13, 5, 10],
+            data: [19, 30, 8, 13, 5, 10, 15, 20, 25, 30, 35, 40],
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1
         }, {
             label: 'Mutasi Masuk',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 19, 3, 5, 2, 3, 7, 9, 11, 13, 15, 17],
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             borderWidth: 1

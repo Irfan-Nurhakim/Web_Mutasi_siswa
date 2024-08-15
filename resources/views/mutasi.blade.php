@@ -92,32 +92,6 @@
         </script>
     </nav>
     
-    <div class="container mt-2">
-        <h1 class="mb-4">Halaman Mutasi</h1>
-        
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-
-        @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
-
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-    </div>
-    
     <div class="container rounded mt-4 p-4" style="background-color: #495057;">
         <div class="col-12">
             <form class="row g-3" method="post" action="{{ route('mutasi.store') }}">
