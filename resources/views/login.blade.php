@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,44 +10,39 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous">
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien latar belakang */
+            height: 100vh; /* Mengatur tinggi body */
         }
 
         .form-signin {
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            background: transparent; /* Latar belakang putih dengan transparansi */
+            max-width: 400px; /* Lebar maksimum */
+            padding: 30px 40px; /* Padding */
+            color: black; /* Warna teks */
+            border-radius: 10px; /* Radius sudut */
+            border: 2px solid rgba(255, 255, 255, 0.15); /* Batas dengan warna putih transparan */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
         }
 
-        .btn-primary {
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        @media (max-width: 768px) {
-            .form-signin {
-                padding: 20px;
+        .form-control {
+            background-color: transparent; /* Mengubah latar belakang input menjadi transparan */
+            &:focus {
+                background-color: transparent; /* Saat di tekan, latar belakang menjadi transparan */
             }
+            color: white; /* Mengubah warna teks menjadi putih */
         }
     </style>
 </head>
 
-<body class="d-flex align-items-center justify-content-center vh-100 bg-body-tertiary">
+<body class="d-flex align-items-center justify-content-center vh-100" style="background-image: url('https://www.pixel4k.com/wp-content/uploads/2024/02/3d-stars-water-drops-reflection-art-4k_1709113674.jpg.webp'); background-size: cover;">
     <div class="container">
         <div class="row justify-content-center rounded">
-            <div class="shadow col-md-6 col-lg-4 text-center rounded">
+            <div>
                 <main class="form-signin w-100 m-auto">
                     <form class="needs-validation" novalidate action="{{ route('login') }}" method="POST">
                         @csrf
-                        <h1 class="h3 mb-3" style="padding-bottom: 20px;"><br>LOGIN</h1>
+                        <h1 class="h3 mb-3 text-center">LOGIN</h1>
 
                         @if ($errors->any())
                             <div class="alert alert-danger">
@@ -75,17 +70,15 @@
                         </div>
 
                         <div class="text-center">
-                            <button class="btn btn-primary w-50 py-2 mb-2" type="submit" name="submit-validate" value="abc">Login</button>
+                            <button class="btn btn-primary w-50 py-2 mb-2" type="submit">Login</button>
                         </div>
                     </form>
                 </main>
-                <p class="mt-5 mb-2 text-body-secondary"> &copy; 2023–2024</p>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
                 <script>
-                    // Tambahkan JavaScript yang diperlukan di sini
                     (function () {
                         'use strict'
-                        // Loop over them and prevent submission
+                        var forms = document.querySelectorAll('.needs-validation');
                         Array.prototype.slice.call(forms)
                             .forEach(function (form) {
                                 form.addEventListener('submit', function (event) {
@@ -93,7 +86,6 @@
                                         event.preventDefault()
                                         event.stopPropagation()
                                     }
-
                                     form.classList.add('was-validated')
                                 }, false)
                             })
