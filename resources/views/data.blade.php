@@ -3,27 +3,119 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login E_Mutasi</title>
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-        crossorigin="anonymous">
+    <title>Data E_Mutasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
     <style>
-        body {
-            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien latar belakang */
-            height: 100vh; /* Mengatur tinggi body */
+        /* Mengatur gaya untuk placeholder gambar */
+        .bd-placeholder-img {
+            font-size: 1.125rem; /* Ukuran font */
+            text-anchor: middle; /* Mengatur teks di tengah */
+            -webkit-user-select: none; /* Mengatur agar tidak dapat dipilih di Chrome */
+            -moz-user-select: none; /* Mengatur agar tidak dapat dipilih di Firefox */
+            user-select: none; /* Mengatur agar tidak dapat dipilih secara umum */
         }
 
-        .form-signin {
-            background: transparent; /* Latar belakang putih dengan transparansi */
-            max-width: 400px; /* Lebar maksimum */
-            padding: 30px 40px; /* Padding */
-            color: black; /* Warna teks */
-            border-radius: 10px; /* Radius sudut */
-            border: 2px solid rgba(255, 255, 255, 0.15); /* Batas dengan warna putih transparan */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
+        /* Mengatur gaya untuk placeholder gambar pada layar yang lebih besar */
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem; /* Ukuran font yang lebih besar */
+            }
+        }
+
+        /* Mengatur gaya untuk link navigasi */
+        .nav-link {
+            color: #fff; /* Warna teks link */
+        }
+
+        /* Mengatur gaya untuk link navigasi saat diarahkan */
+        .nav-link:hover {
+            color: #adb5bd; /* Warna teks link saat diarahkan */
+        }
+
+        /* Mengatur gaya untuk sidebar */
+        .sidebar {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien warna untuk sidebar */
+            color: #fff; /* Warna teks sidebar */
+        }
+
+        /* Mengatur gaya untuk link navigasi di dalam sidebar */
+        .sidebar .nav-link {
+            color: #fff; /* Warna teks link di sidebar */
+        }
+
+        /* Mengatur gaya untuk link navigasi aktif di sidebar */
+        .sidebar .nav-link.active {
+            background-color: #495057; /* Warna latar belakang link aktif */
+        }
+
+        /* Mengatur gaya untuk sidebar pada layar yang lebih kecil */
+        @media (max-width: 767.98px) {
+            .sidebar {
+                position: fixed; /* Mengatur posisi sidebar */
+                top: 56px; /* Mengatur posisi atas sidebar */
+                bottom: 0; /* Mengatur posisi bawah sidebar */
+                left: -100%; /* Mengatur posisi kiri sidebar */
+                z-index: 100; /* Mengatur indeks z untuk sidebar */
+                padding: 20px 0 0; /* Mengatur padding untuk sidebar */
+                overflow-x: hidden; /* Mengatur overflow-x untuk sidebar */
+                overflow-y: auto; /* Mengatur overflow-y untuk sidebar */
+                width: 100%; /* Mengatur lebar sidebar */
+                max-width: 200px; /* Mengatur lebar maksimum sidebar */
+                transition: left .3s ease-in-out; /* Mengatur transisi untuk sidebar */
+            }
+
+            /* Mengatur gaya untuk sidebar saat ditampilkan */
+            .sidebar.show {
+                left: 0; /* Mengatur posisi kiri sidebar saat ditampilkan */
+            }
+
+            /* Mengatur gaya untuk wrapper konten saat sidebar ditampilkan */
+            .content-wrapper {
+                margin-left: 0; /* Mengatur margin kiri untuk wrapper konten */
+            }
+            
+            /* Mengatur gaya untuk tabel responsif */
+            .table-responsive {
+                overflow-x: auto; /* Mengatur overflow-x untuk tabel responsif */
+            }
+            
+            /* Mengatur gaya untuk header dan data tabel */
+            .table th, .table td {
+                white-space: nowrap; /* Mengatur agar teks tidak terpotong */
+            }
+        }
+
+        /* Mengatur gaya untuk sidebar pada layar yang lebih besar */
+        @media (min-width: 768px) {
+            .sidebar {
+                position: sticky; /* Mengatur posisi sidebar */
+                top: 56px; /* Mengatur posisi atas sidebar */
+                height: calc(100vh - 56px); /* Mengatur tinggi sidebar */
+            }
+
+            /* Mengatur gaya untuk wrapper konten pada layar yang lebih besar */
+            .content-wrapper {
+                margin-left: 200px; /* Mengatur margin kiri untuk wrapper konten */
+            }
+        }
+
+        /* Mengatur gaya untuk header tabel */
+        .table th {
+            white-space: nowrap; /* Mengatur agar teks tidak terpotong */
+            vertical-align: middle; /* Mengatur posisi vertikal teks */
+            text-align: center; /* Mengatur posisi horizontal teks */
+        }
+        
+        /* Mengatur gaya untuk link navigasi */
+        .nav-link {
+            transition: all 0.3s ease; /* Mengatur transisi untuk link navigasi */
+        }
+        /* Mengatur gaya untuk link navigasi saat diarahkan, difokuskan, atau aktif */
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.5); /* Mengatur warna latar belakang menjadi lebih terang */
+            transform: scale(1.05); /* Mengatur skala */
         }
     </style>
 </head>
@@ -74,12 +166,14 @@
             
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="background-image: url('https://www.pixel4k.com/wp-content/uploads/2024/02/3d-stars-water-drops-reflection-art-4k_1709113674.jpg.webp'); background-size: cover;">
-                <div class="container py-5">
+                <div class="container py-2">
+                <h1 class="my-4">Data Mutasi Siswa</h1>
                     <div class="card">
                         <div class="card-header">
                             <div class="container-fluid">
+                                <div class="d-flex justify-content-between align-items-center my-3 flex-wrap"></div>
                                 <div class="d-flex justify-content-between align-items-center my-3 flex-wrap">
-                                    <h1 class="my-4">Data Mutasi Siswa</h1>
+                                    <input type="text" id="searchInput" class="form-control" placeholder="Cari siswa..." style="width: 300px;">
                                     <a href="{{ route('data.export') }}" class="btn btn-primary mt-2 mt-md-0">Ekspor ke Excel</a>
                                 </div>
                                 <div class="table-responsive">
@@ -178,6 +272,26 @@
             link.addEventListener('click', function() {
                 document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
+            });
+        });
+
+        // Fitur pencarian
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName('td');
+                let found = false;
+
+                for (let i = 0; i < cells.length; i++) {
+                    if (cells[i].textContent.toLowerCase().includes(filter)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.style.display = found ? '' : 'none';
             });
         });
     </script>
