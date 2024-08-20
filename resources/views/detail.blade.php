@@ -14,20 +14,29 @@
         body {
             background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien latar belakang */
             height: 100vh; /* Mengatur tinggi body */
+            background-image: url('/storage/assets/disdik.jpg'); /* Path gambar latar belakang */
+            background-size: cover; /* Ukuran gambar latar belakang */
+            background-position: center; /* Posisikan gambar di tengah */
+            background-repeat: no-repeat; /* Jangan ulangi gambar */
         }
 
-        .form-signin {
-            background: transparent; /* Latar belakang putih dengan transparansi */
-            max-width: 400px; /* Lebar maksimum */
-            padding: 30px 40px; /* Padding */
-            color: black; /* Warna teks */
+        .card {
+            background-color: rgba(255, 255, 255, 0.7); /* Warna latar belakang putih dengan transparansi */
             border-radius: 10px; /* Radius sudut */
-            border: 2px solid rgba(255, 255, 255, 0.15); /* Batas dengan warna putih transparan */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        }
+
+        .card-header,
+        .card-body {
+            backdrop-filter: blur(10px); /* Efek blur pada background konten */
+        }
+
+        .list-group-item {
+            background-color: rgba(255, 255, 255, 0.5); /* Warna latar belakang item list dengan transparansi */
         }
     </style>
 </head>
-<body style="background-image: url('https://www.pixel4k.com/wp-content/uploads/2024/02/3d-stars-water-drops-reflection-art-4k_1709113674.jpg.webp'); background-size: cover;">
+<body>
     <div class="container py-5">
         <div class="card">
             <div class="card-header">
@@ -64,6 +73,7 @@
                             <li class="list-group-item"><strong>Sekolah Baru:</strong> {{ $siswa->nama_sekolah_baru }}</li>
                             <li class="list-group-item"><strong>Kec.Sekolah Tujuan:</strong> {{ $siswa->kec_sekolah_tujuan }}</li>
                             <li class="list-group-item"><strong>Kab/Kota Sekolah Tujuan:</strong> {{ $siswa->kab_kota_sekolah_tujuan }}</li>
+                            <li class="list-group-item"><strong>Provinsi Sekolah Tujuan:</strong> {{ $siswa->prov_sekolah_tujuan }}</li>
                         </ul>
                     </div>
                     <div class="col-md-6">

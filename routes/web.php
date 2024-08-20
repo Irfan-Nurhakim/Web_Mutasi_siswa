@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SiswaController;
 use App\Exports\SiswaExport;
+use App\Http\Controllers\DashboardController;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -16,7 +17,11 @@ Route::get('/', function () {
 });
 
 // Halaman Mutasi
-// Route::get('/mutasi', [MutasiController::class, 'index'])->name('mutasi.index');
+
+// Route::get('/mutasi', function () {
+//     return view('mutasi');
+// });
+Route::get('/mutasi', [MutasiController::class, 'index'])->name('mutasi.index');
 Route::post('/mutasi', [MutasiController::class, 'store'])->name('mutasi.store');
 
 // Halaman Autentikasi
@@ -29,10 +34,8 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 
 // Halaman Dashboard
-Route::get('/mutasi', function () {
-    return view('mutasi');
-});
-Route::get('/dashboard', [MutasiController::class, 'index'])->name('dashboard');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // Halaman Data
 Route::get('/data', [DataController::class, 'index'])->name('data.index');

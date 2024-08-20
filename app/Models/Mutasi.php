@@ -13,6 +13,6 @@ class Mutasi extends Model
         'tanggal', 'nama_siswa', 'ttl', 'asal_sekolah', 'no_surat_sekolah',
         'ttl_surat_dari_sekolah', 'jenis_kelamin', 'nis', 'nisn', 'kelas',
         'kecamatan', 'kabupaten', 'nama_sekolah_baru', 'kec_sekolah_tujuan',
-        'kab_kota_sekolah_tujuan', 'no_wa', 'email', 'keterangan'
+        'kab_kota_sekolah_tujuan','prov_sekolah_tujuan', 'no_wa', 'email', 'keterangan'
     ];
 }

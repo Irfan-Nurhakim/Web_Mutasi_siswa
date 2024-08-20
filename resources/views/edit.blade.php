@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body style="background-image: url('https://www.pixel4k.com/wp-content/uploads/2024/02/3d-stars-water-drops-reflection-art-4k_1709113674.jpg.webp'); background-size: cover;">
+<body style="background-image: url('storage/assets/bg1.jpg'); background-size: cover; height: 100vh;">
         <div class="container py-5">
             <div class="card">
                 <div class="card-header">
@@ -90,6 +90,10 @@
                         <div class="mb-3">
                             <label for="kab_kota_sekolah_tujuan" class="form-label">Kab/Kota Sekolah Tujuan</label>
                             <input type="text" class="form-control" id="kab_kota_sekolah_tujuan" name="kab_kota_sekolah_tujuan" value="{{ $siswa->kab_kota_sekolah_tujuan }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prov_sekolah_tujuan" class="form-label">Provinsi Sekolah Tujuan</label>
+                            <input type="text" class="form-control" id="prov_sekolah_tujuan" name="prov_sekolah_tujuan" value="{{ $siswa->prov_sekolah_tujuan }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="no_wa" class="form-label">No.Telp</label>

@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('nama_sekolah_baru')->index();
             $table->string('kec_sekolah_tujuan')->index();
             $table->string('kab_kota_sekolah_tujuan')->index();
+            $table->string('prov_sekolah_tujuan')->index();
             $table->string('no_wa')->index();
             $table->string('email')->index();
             $table->text('keterangan')->nullable();

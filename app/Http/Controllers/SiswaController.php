@@ -77,13 +77,13 @@ class SiswaController extends Controller
         $section->addTextBreak(1);
     
         // Menambahkan alamat tujuan
-        $section->addText('Yth. Kepala .......', ['align' => 'left'], ['indent' => 0.6, 'spaceAfter' => 0]);
-        $section->addText('Kec.  .......', ['align' => 'left'], ['indent' => 1.2, 'spaceAfter' => 0]);
-        $section->addText('di Kab. .......', ['align' => 'left'], ['indent' => 1.2]);
+        $section->addText('Yth. Kepala ' . $siswa->nama_sekolah_baru, ['align' => 'left'], ['indent' => 0.6, 'spaceAfter' => 0]);
+        $section->addText('Kec. '. $siswa->kec_sekolah_tujuan, ['align' => 'left'], ['indent' => 1.2, 'spaceAfter' => 0]);
+        $section->addText('di Kab. '. $siswa->kab_kota_sekolah_tujuan, ['align' => 'left'], ['indent' => 1.2]);
         $section->addTextBreak(1);
     
         // Menambahkan isi surat
-        $section->addText('     Berdasarkan surat keterangan pindah sekolah dari Kepala' . ' ' .$siswa->asal_sekolah . ' ' . 'Kec.' .$siswa->kecamatan . ' ' . 'Kota Kab.' .$siswa->kabupaten . ' ' . 'Nomor:' . ' ' .$siswa->no_surat_sekolah . ' ' . 'Tanggal:' . ' ' .$siswa->ttl_surat_dari_sekolah . ' ' . 'dengan ini kami tidak keberatan bahwa:', ['align' => 'justify'], ['indent' => 1.2]);
+        $section->addText('     Berdasarkan surat keterangan pindah sekolah dari Kepala' . ' ' .$siswa->asal_sekolah . ' ' . 'Kec.' .$siswa->kecamatan . ' ' . 'Kab.' .$siswa->kabupaten . ' ' . 'Nomor:' . ' ' .$siswa->no_surat_sekolah . ' ' . 'Tanggal:' . ' ' .$siswa->ttl_surat_dari_sekolah . ' ' . 'dengan ini kami tidak keberatan bahwa:', ['align' => 'justify'], ['indent' => 1.2]);
         $section->addTextBreak(0);
     
         // Menambahkan data siswa
@@ -99,7 +99,7 @@ class SiswaController extends Controller
         $section->addText('Kelas                            : ' . $siswa->kelas, ['align' => 'justify'], ['indent' => 1.2, 'spaceAfter' => 0]);
         $section->addText('Kecamatan                   : ' . $siswa->kec_sekolah_tujuan, ['align' => 'justify'], ['indent' => 1.2, 'spaceAfter' => 0]);
         $section->addText('Kab/Kota                      : ' . $siswa->kab_kota_sekolah_tujuan, ['align' => 'justify'], ['indent' => 1.2, 'spaceAfter' => 0]);
-        $section->addText('Provinsi                        : ......', ['align' => 'justify'], ['indent' => 1.2, 'spaceAfter' => 0]);
+        $section->addText('Provinsi                        : ' . $siswa->prov_sekolah_tujuan, ['align' => 'justify'], ['indent' => 1.2, 'spaceAfter' => 0]);
         $section->addText('Dengan alasan             : ' .$siswa->keterangan, ['align' => 'justify'], ['indent' => 1.2, 'spaceAfter' => 0]);
         $section->addTextBreak(1);
     

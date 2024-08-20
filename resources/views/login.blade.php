@@ -11,33 +11,54 @@
         crossorigin="anonymous">
     <style>
         body {
-            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien latar belakang */
+            background: url('storage/assets/disdik.jpg') no-repeat center center fixed; /* Gambar latar belakang */
+            background-size: cover; /* Menyesuaikan ukuran gambar latar belakang */
             height: 100vh; /* Mengatur tinggi body */
+            margin: 0; /* Menghapus margin default */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Menyiapkan posisi relatif untuk overlay */
+        }
+
+        .overlay {
+            position: absolute; /* Menempatkan overlay di atas gambar latar belakang */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Overlay abu-abu transparan */
+            z-index: 1; /* Menempatkan overlay di atas gambar */
         }
 
         .form-signin {
-            background: transparent; /* Latar belakang putih dengan transparansi */
+            background: rgba(255, 255, 255, 0.9); /* Kotak login dengan latar belakang putih semi-transparan */
             max-width: 400px; /* Lebar maksimum */
             padding: 30px 40px; /* Padding */
-            color: black; /* Warna teks */
+            color: black; /* Warna teks hitam */
             border-radius: 10px; /* Radius sudut */
-            border: 2px solid rgba(255, 255, 255, 0.15); /* Batas dengan warna putih transparan */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
+            border: 2px solid rgba(0, 0, 0, 0.1); /* Batas dengan warna hitam transparan */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Efek bayangan lebih lembut */
+            position: relative; /* Menempatkan kotak login di atas overlay */
+            z-index: 2; /* Menempatkan kotak login di atas overlay */
         }
 
         .form-control {
-            background-color: transparent; /* Mengubah latar belakang input menjadi transparan */
-            &:focus {
-                background-color: transparent; /* Saat di tekan, latar belakang menjadi transparan */
-            }
-            color: white; /* Mengubah warna teks menjadi putih */
+            background-color: #ffffff; /* Latar belakang input putih */
+            color: black; /* Warna teks hitam */
+        }
+
+        .form-control:focus {
+            background-color: #ffffff; /* Latar belakang input tetap putih saat fokus */
+            color: black; /* Warna teks tetap hitam saat fokus */
         }
     </style>
 </head>
 
-<body class="d-flex align-items-center justify-content-center vh-100" style="background-image: url('https://www.pixel4k.com/wp-content/uploads/2024/02/3d-stars-water-drops-reflection-art-4k_1709113674.jpg.webp'); background-size: cover;">
+<body>
+    <div class="overlay"></div> <!-- Overlay abu-abu transparan -->
     <div class="container">
-        <div class="row justify-content-center rounded">
+        <div class="row justify-content-center">
             <div>
                 <main class="form-signin w-100 m-auto">
                     <form class="needs-validation" novalidate action="{{ route('login') }}" method="POST">
@@ -74,25 +95,26 @@
                         </div>
                     </form>
                 </main>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-                <script>
-                    (function () {
-                        'use strict'
-                        var forms = document.querySelectorAll('.needs-validation');
-                        Array.prototype.slice.call(forms)
-                            .forEach(function (form) {
-                                form.addEventListener('submit', function (event) {
-                                    if (!form.checkValidity()) {
-                                        event.preventDefault()
-                                        event.stopPropagation()
-                                    }
-                                    form.classList.add('was-validated')
-                                }, false)
-                            })
-                    })()
-                </script>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>

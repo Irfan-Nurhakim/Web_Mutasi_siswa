@@ -8,9 +8,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     </head>
     <style>
+        body {
+            background-color: #ffffff; /* Background putih */
+        }
         .nav-link {
             position: relative;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out; /* Transisi untuk perubahan warna teks */
+            color: #000000; /* Warna teks navbar */
         }
         .nav-link::after {
             content: '';
@@ -20,20 +24,27 @@
             display: block;
             margin-top: 5px;
             right: 0;
-            background: white;
-            transition: width 0.3s ease, right 0.3s ease;
+            background: #000000; /* Warna garis bawah saat hover */
+            transition: width 0.3s ease, right 0.3s ease; /* Transisi untuk garis bawah */
         }
         .nav-link:hover::after,
         .nav-link.active::after {
-            width: 100%;
-            right: 0;
+            width: 100%; /* Garis bawah penuh saat hover atau aktif */
+            right: 0; /* Posisi garis bawah */
         }
         .btn-primary {
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transisi untuk perubahan warna latar belakang dan teks */
         }
         .btn-primary:active {
-            background-color: white !important;
-            color: #007bff !important;
+            background-color: white !important; /* Warna latar belakang tombol saat ditekan */
+            color: #000000 !important; /* Warna teks tombol saat ditekan */
+        }
+        .nav-link {
+            transition: all 0.3s ease; /* Transisi untuk semua perubahan pada nav-link */
+        }
+        .nav-link:hover, .nav-link:focus, .nav-link.active {
+            background-color: rgba(0, 0, 0, 0.1); /* Warna latar belakang saat hover, fokus, atau aktif */
+            transform: scale(1.05); /* Efek pembesaran saat hover */
         }
         @media (max-width: 768px) {
             .container {
@@ -50,35 +61,52 @@
                 width: 100%;
             }
         }
-
-        .nav-link {
-        transition: all 0.3s ease;
+        /* Navbar */
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #e3f2fd; /* Background putih semu biru untuk navbar */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
         }
-        .nav-link:hover, .nav-link:focus, .nav-link.active {
-        background-color: rgba(255, 255, 255, 0.1);
-        transform: scale(1.05);
+        .navbar-brand {
+            color: #000000; /* Warna teks navbar-brand */
+        }
+        .navbar-nav .nav-link {
+            color: #000000; /* Warna teks navbar-link */
+        }
+        /* Footer */
+        footer {
+            background-color: #e3f2fd; /* Background putih semu biru untuk footer */
+            color: #000000; /* Warna teks footer */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan shadow ke footer */
+        }
+        footer a {
+            color: #000000; /* Warna tautan footer */
+        }
+        footer a:hover {
+            color: #0056b3; /* Warna tautan footer saat hover */
         }
     </style>
-    </head>
     <body>
-        <nav class="navbar navbar-expand-lg text-bg-secondary sticky-top" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="/">E Mutasi Siswa</a>
+                <img src="{{ asset('storage/assets/logo.png') }}" height="60" width="90" class="d-inline-block align-top me-2">
+                <a class="navbar-brand" href="/"><strong>E Mutasi Siswa</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link rounded" href="/"> <i class="bi bi-house-door-fill"> </i> Home</a>
+                            <a class="nav-link rounded" href="/"> <i class="bi bi-house-door-fill"> </i> <strong>Home</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link rounded" href="/mutasi"><i class="bi bi-journal-bookmark"> </i>Mutasi</a>
+                            <a class="nav-link rounded" href="/mutasi"><i class="bi bi-journal-bookmark"> </i><strong>Mutasi</strong></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link rounded" href="/login"><i class="bi bi-box-arrow-right"> </i>Login</a>
+                            <a class="nav-link rounded" href="/login"><i class="bi bi-box-arrow-right"> </i><strong>Login</strong></a>
                         </li>
                     </ul>
                 </div>
@@ -93,87 +121,66 @@
             </script>
         </nav>
 
-        <div class="card mt-4 bg-light link-dark container">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="max-width: 100%; margin: auto;">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="https://dvgddkosknh6r.cloudfront.net/live/media/img/1689055582-IMG-20230710-WA0225.jpg" class="d-block w-100" alt="Slide 1" style="height: auto; width: 100%; object-fit: cover;">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Judul Slide Pertama</h5>
-                        <p>Deskripsi singkat untuk slide pertama.</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img src="https://asset-2.tstatic.net/priangan/foto/bank/images/asngelarapel.jpg" class="d-block w-100" alt="Slide 2" style="height: auto; width: 100%; object-fit: cover;">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Judul Slide Kedua</h5>
-                        <p>Deskripsi singkat untuk slide kedua.</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img src="https://dvgddkosknh6r.cloudfront.net/live/media/img/1678752975-IMG-20230313-WA0115.jpg" class="d-block w-100" alt="Slide 3" style="height: auto; width: 100%; object-fit: cover;">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Judul Slide Ketiga</h5>
-                        <p>Deskripsi singkat untuk slide ketiga.</p>
-                    </div>
+        <div class="card mt-4 link-dark container" style="background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div>
+                <div >
+                    <div >
+                        <img src="{{ asset('storage/assets/disdik.jpg') }}" class="d-block w-100" alt="Slide 1" style="height: auto; width: 100%; object-fit: cover;">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Sebelumnya</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Selanjutnya</span>
-                </button>
             </div>
         </div>
 
-        <div class="card bg-light link-dark container mt-3">
-            <div class="card-body rounded text-center">
-                <h5 class="card-title ">E Mutasi Siswa</h5>
-                <p class="card-text ">Selamat datang di Dasbor Katalog Makanan! Ini adalah pusat utama untuk
-                    dan menampilkan katalog makanan yang menarik di restoran kami:</p>
-                <a href="/mutasi" class="btn btn-info">Menu</a>
+        <div class="card container mt-3" style="background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <div class="card-body rounded text-center text-black">
+                <h5 class="card-title">E Mutasi Siswa</h5>
+                <p class="card-text">E-Mutasi Online Siswa adalah platform yang memungkinkan orang tua, siswa, dan pihak sekolah untuk melakukan pengajuan mutasi secara daring. Sistem ini menggantikan proses manual yang sering kali memakan waktu dan rentan terhadap kesalahan. Dengan e-mutasi, semua langkah dalam proses mutasi dapat dilakukan secara online, mulai dari pengajuan hingga persetujuan.</p>
+                <a href="/mutasi" class="btn btn-primary">Ajukan Mutasi</a>
             </div>
         </div>
     
-        <footer class="bg-secondary text-white py-2 mt-5">
+        <footer class="py-4 mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h6>Logo DisDik</h6>
+                    <div class="col-md-3">
+                        <h6>Profil Dinas Pendidikan Garut</h6>
                         <ul class="list-unstyled">
-                            <li><i class="bi bi-geo-alt-fill text-danger"></i>Lokasi</li>
-                            <li><i class="bi bi-clock-fill text-danger"></i> Jam Kerja</li>
-                            <li><i class="bi bi-telephone-fill text-danger"></i> Telepon</li>
-                            <li><i class="bi bi-envelope-fill text-danger"></i> Email</li>
+                            <li>
+                                <i class="bi bi-geo-alt-fill text-danger"></i> Alamat
+                                <p> Jl. Pembangunan No.179, Sukagalih, Kec. Tarogong Kidul, Kabupaten Garut, Jawa Barat 44151 <br>
+                                <a href="https://maps.app.goo.gl/jni8F8WMozbFMrSB6">Lihat Lokasi di Peta</a></p>
+                            </li>
+                            <li>
+                                <i class="bi bi-clock-fill text-danger"></i> Jam Kerja
+                                <p> Senin - Jumaat (08.00–16.00 - 08.00–16.30)</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-telephone-fill text-danger"></i> Telpon
+                                <p>(0262) 233155</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-envelope-fill text-danger"></i> Email
+                                <p>- </p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3 offset-md-2">
                         <h6>Media Sosial</h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white"><i class="bi bi-instagram text-danger"></i> Instagram</a></li>
-                            <li><a href="#" class="text-white"><i class="bi bi-facebook text-danger"></i> Facebook</a></li>
+                            <li><p class="text-dark"><i class="bi bi-instagram text-danger"></i> disdikkabgarut</p></li>
+                            <li><p class="text-dark"><i class="bi bi-facebook text-danger"></i> DINAS Pendidikan Kab.garut</p></li>
+                            <li><p class="text-dark"><i class="bi bi-whatsapp text-danger"></i> -</p></li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
-                        <h6>Link Lainnya</h6>
-                        <!-- Tambahkan link lainnya di sini jika diperlukan -->
+                    <div class="col-md-1 offset">
+                        <div class="mt-3">
+                            <img src="{{ asset('storage/assets/logo.png') }}" alt="Link Image" class="img-fluid rounded" style="max-width: 800px; height: 300px;">
+                        </div>
                     </div>
                 </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"><path fill="#e3f2fd" fill-opacity="1" d="M0,32L60,42.7C120,53,240,75,360,72C480,69,600,43,720,45.3C840,48,960,80,1080,80C1200,80,1320,48,1380,32L1440,16L1440,160L1380,160C1320,160,1200,160,1080,160C960,160,840,160,720,160C600,160,480,160,360,160C240,160,120,160,60,160L0,160Z"></path></svg>
         </footer>
-        <script 
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-            crossorigin="anonymous">
-        </script>
-  </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
 </html>

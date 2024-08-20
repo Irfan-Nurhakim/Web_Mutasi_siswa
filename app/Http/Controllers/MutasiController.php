@@ -10,10 +10,8 @@ class MutasiController extends Controller
 {
     public function index()
     {
-        $totalMutasi = Mutasi::count();
-        $mutasiMasuk = Mutasi::all()->count(); // Menghitung semua data yang telah diinput
-    
-        return view('dashboard', compact('totalMutasi', 'mutasiMasuk'));
+        $mutasi = Mutasi::all();
+        return view('mutasi');
     }
 
     public function create()
@@ -40,6 +38,7 @@ class MutasiController extends Controller
             'nama_sekolah_baru' => 'required|string',
             'kec_sekolah_tujuan' => 'required|string',
             'kab_kota_sekolah_tujuan' => 'required|string',
+            'prov_sekolah_tujuan' => 'required|string',
             'no_wa' => 'required|string',
             'email' => 'required|email',
             'keterangan' => 'nullable|string',
@@ -47,7 +46,8 @@ class MutasiController extends Controller
 
         try {
             $mutasi = Mutasi::create($validatedData);
-            return redirect()->route('mutasi.index')->with('success', 'Data mutasi berhasil disimpan');
+            Log::info('Data mutasi berhasil disimpan:', $mutasi->toArray()); // Log penyimpanan yang berhasil
+            return redirect()->route('mutasi.index')->with('success', 'Data mutasi berhasil dikirim');
         } catch (\Exception $e) {
             Log::error('Error saat menyimpan data mutasi: ' . $e->getMessage());
             return back()->with('error', 'Terjadi kesalahan saat menyimpan data. Silakan coba lagi.');
@@ -85,6 +85,7 @@ class MutasiController extends Controller
             'nama_sekolah_baru' => 'required|string',
             'kec_sekolah_tujuan' => 'required|string',
             'kab_kota_sekolah_tujuan' => 'required|string',
+            'prov_sekolah_tujuan' => 'required|string',
             'no_wa' => 'required|string',
             'email' => 'required|email',
             'keterangan' => 'nullable|string',

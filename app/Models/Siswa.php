@@ -26,6 +26,7 @@ class Siswa extends Model
         'nama_sekolah_baru',
         'kec_sekolah_tujuan',
         'kab_kota_sekolah_tujuan',
+        'prov_sekolah_tujuan',
         'no_wa',
         'email',
         'keterangan',
