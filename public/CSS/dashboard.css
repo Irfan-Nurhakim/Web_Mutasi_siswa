@@ -1,0 +1,134 @@
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem; 
+    text-anchor: middle; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    user-select: none; 
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+.nav-link {
+    color: #000; 
+}
+
+
+.nav-link:hover {
+    color: #333; 
+}
+
+.sidebar {
+    background-color: #e3f2fd;
+    color: #000; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
+    
+}
+.sidebar .nav-link {
+    color: #000; 
+}
+
+.sidebar .nav-link.active {
+    background-color: #3cdfe8; /
+}
+
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: fixed; 
+        top: 56px;
+        bottom: 0; 
+        left: -100%; 
+        z-index: 100; 
+        padding: 20px 0 0; 
+        overflow-x: hidden; 
+        overflow-y: auto; 
+        width: 100%; 
+        max-width: 200px;
+        transition: left .3s ease-in-out;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
+    }
+
+  
+    .sidebar.show {
+        left: 0; 
+    }
+
+   
+    .content-wrapper {
+        margin-left: 0; 
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+   
+    .table th, .table td {
+        white-space: nowrap; 
+    }
+}
+
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: sticky; 
+        top: 80px; 
+        height: calc(100vh - 80px); 
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); 
+    }
+    .content-wrapper {
+        margin-left: 200px; 
+    }
+}
+
+
+.table th {
+    white-space: nowrap; 
+    vertical-align: middle; 
+    text-align: center; 
+}
+
+
+.nav-link {
+    transition: all 0.3s ease; 
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); 
+}
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #bae4f0;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+.navbar-brand {
+    color: #000;
+}
+.navbar-nav .nav-link {
+    color: #000; 
+}
+.navbar-nav .nav-link:hover {
+    color: #333; 
+}
+
+/* Mengatur gaya untuk background dengan warna bayangan */
+body {
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    height: 100vh;
+}
+
+.card {
+    max-height: 630px; /* Atur tinggi maksimum */
+    overflow-y: auto;/* Aktifkan gulir vertikal */
+}
+

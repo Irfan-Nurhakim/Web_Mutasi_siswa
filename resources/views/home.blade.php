@@ -6,87 +6,8 @@
         <title>Home E_Mutasi</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link href="css/home.css" rel="stylesheet">
     </head>
-    <style>
-        body {
-            background-color: #ffffff; /* Background putih */
-        }
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease-in-out; /* Transisi untuk perubahan warna teks */
-            color: #000000; /* Warna teks navbar */
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            display: block;
-            margin-top: 5px;
-            right: 0;
-            background: #000000; /* Warna garis bawah saat hover */
-            transition: width 0.3s ease, right 0.3s ease; /* Transisi untuk garis bawah */
-        }
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%; /* Garis bawah penuh saat hover atau aktif */
-            right: 0; /* Posisi garis bawah */
-        }
-        .btn-primary {
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transisi untuk perubahan warna latar belakang dan teks */
-        }
-        .btn-primary:active {
-            background-color: white !important; /* Warna latar belakang tombol saat ditekan */
-            color: #000000 !important; /* Warna teks tombol saat ditekan */
-        }
-        .nav-link {
-            transition: all 0.3s ease; /* Transisi untuk semua perubahan pada nav-link */
-        }
-        .nav-link:hover, .nav-link:focus, .nav-link.active {
-            background-color: rgba(0, 0, 0, 0.1); /* Warna latar belakang saat hover, fokus, atau aktif */
-            transform: scale(1.05); /* Efek pembesaran saat hover */
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-            h1 {
-                font-size: 1.5rem;
-            }
-            .form-label {
-                font-size: 0.9rem;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
-        /* Navbar */
-        .navbar {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            background-color: #e3f2fd; /* Background putih semu biru untuk navbar */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-        }
-        .navbar-brand {
-            color: #000000; /* Warna teks navbar-brand */
-        }
-        .navbar-nav .nav-link {
-            color: #000000; /* Warna teks navbar-link */
-        }
-        /* Footer */
-        footer {
-            background-color: #e3f2fd; /* Background putih semu biru untuk footer */
-            color: #000000; /* Warna teks footer */
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan shadow ke footer */
-        }
-        footer a {
-            color: #000000; /* Warna tautan footer */
-        }
-        footer a:hover {
-            color: #0056b3; /* Warna tautan footer saat hover */
-        }
-    </style>
     <body>
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
