@@ -10,31 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <style>
-        body {
-            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradien latar belakang */
-            height: 100vh; /* Mengatur tinggi body */
-            background-image: url('/storage/assets/disdik.jpg'); /* Path gambar latar belakang */
-            background-size: cover; /* Ukuran gambar latar belakang */
-            background-position: center; /* Posisikan gambar di tengah */
-            background-repeat: no-repeat; /* Jangan ulangi gambar */
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.7); /* Warna latar belakang putih dengan transparansi */
-            border-radius: 10px; /* Radius sudut */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-        }
-
-        .card-header,
-        .card-body {
-            backdrop-filter: blur(10px); /* Efek blur pada background konten */
-        }
-
-        .list-group-item {
-            background-color: rgba(255, 255, 255, 0.5); /* Warna latar belakang item list dengan transparansi */
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
 </head>
 <body>
     <div class="container py-5">

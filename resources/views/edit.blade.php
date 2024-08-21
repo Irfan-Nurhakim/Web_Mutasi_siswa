@@ -10,27 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <style>
-        body {
-            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-            height: 100vh; /* Mengatur tinggi body */
-        }
-
-        .form-signin {
-            background: transparent; /* Latar belakang putih dengan transparansi */
-            max-width: 400px; /* Lebar maksimum */
-            padding: 30px 40px; /* Padding */
-            color: black; /* Warna teks */
-            border-radius: 10px; /* Radius sudut */
-            border: 2px solid rgba(255, 255, 255, 0.15); /* Batas dengan warna putih transparan */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
-        }
-
-        .card-header {
-            max-height: 700px; /* Atur tinggi maksimum */
-            overflow-y: auto; /* Aktifkan gulir vertikal */
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/detail.css') }}">
 </head>
 <body>
     <div class="container py-5">

@@ -1,4 +1,18 @@
+/* Mengatur gaya untuk background dengan warna bayangan */
+body {
+    background-image: url('/storage/assets/disdik.jpg');
+    height: 100vh;
+    background-size: cover; /* Ukuran gambar latar belakang */
+    background-position: right 30%;
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+}
 
+.container {
+    background-color: rgba(255, 255, 255, 0.7); /* Warna latar belakang putih dengan transparansi */
+    border-radius: 10px; /* Radius sudut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    
+}
 
 .bd-placeholder-img {
     font-size: 1.125rem; 
@@ -119,12 +133,6 @@
 }
 .navbar-nav .nav-link:hover {
     color: #333; 
-}
-
-/* Mengatur gaya untuk background dengan warna bayangan */
-body {
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-    height: 100vh;
 }
 
 .card {

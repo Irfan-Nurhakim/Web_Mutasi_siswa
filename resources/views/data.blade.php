@@ -55,7 +55,7 @@
         </nav>
         <!-- Main Content -->
         <main class="col-md-9 mt-3 ms-sm-auto col-lg-10 px-md-4">
-            <div class="container" style="background-color: #fff; border-radius: 10px; box-shadow: 0 0 5px #888;">
+            <div class="container">
                 <div class="d-flex justify-content-between align-items-center my-3 flex-wrap">
                     <h1 class="my-2">Data Mutasi Siswa</h1>
                     <input type="text" id="searchInput" class="form-control" placeholder="Cari siswa..." style="width: 300px; ">
