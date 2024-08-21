@@ -63,7 +63,7 @@
                         <div class="col-12 col-md-3 mb-4">
                             <div class="card bg-secondary text-white">
                                 <div class="card-body">
-                                    <h5 class="card-title"></i> Selamat Datang Di</h5>
+                                    <h5 class="card-title"></i> Selamat Datang Di Halaman</h5>
                                     <p class="card-text display-4"><h1>Dashboard</h1></p>
                                 </div>
                             </div>
