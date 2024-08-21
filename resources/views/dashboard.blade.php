@@ -59,8 +59,15 @@
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="container-fluid">
-                    <h1 class="my-4">Dashboard</h1>
-                    <div class="row">
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-3 mb-4">
+                            <div class="card bg-secondary text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title"></i> Selamat Datang Di</h5>
+                                    <p class="card-text display-4"><h1>Dashboard</h1></p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12 col-md-3 mb-4">
                             <div class="card bg-primary text-white">
                                 <div class="card-body">
@@ -78,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-1">
                         <div class="col-12 mb-4">
                             <div class="card">
                                 <div class="card-body">

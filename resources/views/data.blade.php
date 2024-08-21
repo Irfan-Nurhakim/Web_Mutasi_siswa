@@ -61,10 +61,10 @@
                     <input type="text" id="searchInput" class="form-control" placeholder="Cari siswa..." style="width: 300px; ">
                     <a href="{{ route('data.export') }}" class="btn btn-primary mt-2 mt-md-0">Ekspor ke Excel</a>
                 </div>
-                <div class="card">
+                <div class="card data-card">
                     <div class="container-fluid">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover blur-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
