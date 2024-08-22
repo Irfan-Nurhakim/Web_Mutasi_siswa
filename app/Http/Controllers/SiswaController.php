@@ -71,9 +71,22 @@ class SiswaController extends Controller
         $section->addText('Garut, ' . now()->format('d F Y'), [], ['align' => 'right']);
     
         // Menambahkan nomor surat
-        $section->addText('Nomor     : 400.3.6.6/         -Disdik', ['align' => 'left'], ['spaceAfter' => 0]);
-        $section->addText('Lampiran : ', ['align' => 'left'], ['spaceAfter' => 0]);
-        $section->addText('Hal          : Rekomendasi Mutasi Siswa', ['align' => 'left'], ['spaceBefore' => 0]);
+        $table = $section->addTable();
+        $table->addRow();
+        $cell1 = $table->addCell(1000);
+        $cell1->addText('Nomor', ['align' => 'right'], ['spaceAfter' => 0]);
+        $cell2 = $table->addCell(2000);
+        $cell2->addText(': 400.3.6.6/ -Disdik', ['align' => 'left'], ['spaceAfter' => 0]);
+        $table->addRow();
+        $cell3 = $table->addCell(1000);
+        $cell3->addText('Lampiran', ['align' => 'right'], ['spaceAfter' => 0]);
+        $cell4 = $table->addCell(1000);
+        $cell4->addText(': ', ['align' => 'left'], ['spaceAfter' => 0]);
+        $table->addRow();
+        $cell5 = $table->addCell(1000);
+        $cell5->addText('Hal', ['align' => 'right'], ['spaceAfter' => 0]);
+        $cell6 = $table->addCell(2000);
+        $cell6->addText(': Rekomendasi Mutasi Siswa', ['align' => 'left'], ['spaceAfter' => 0]);
         $section->addTextBreak(1);
     
         // Menambahkan alamat tujuan
