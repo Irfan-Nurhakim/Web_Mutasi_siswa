@@ -1,7 +1,7 @@
 
     /* Mengatur gaya untuk background dengan warna bayangan */
     body {
-        background-image: url('/storage/assets/disdik.jpg');
+        background-color: #eeecec;
         height: 100vh;
         background-size: cover; /* Ukuran gambar latar belakang */
         background-position: right 30%;
@@ -16,7 +16,7 @@
     }
 
     .card {
-        background-color: transparent; 
+        background-color: #ffffff; 
         border-radius: 10px; /* Radius sudut */
         box-shadow: 0 4px 8px rgba(117, 233, 229, 0.1); 
         backdrop-filter: blur(10px); /* Efek blur */

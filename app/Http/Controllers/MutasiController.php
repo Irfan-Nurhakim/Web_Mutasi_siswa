@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Mutasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class MutasiController extends Controller
 {
     public function index()
     {
+        if (Auth::check()) {
+            return redirect('/dashboard');
+        }
         $mutasi = Mutasi::all();
         return view('mutasi');
     }

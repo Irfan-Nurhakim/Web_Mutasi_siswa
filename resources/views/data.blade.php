@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="css/dashboard.css" rel="stylesheet">
+    <script src="js/data.js"> </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -148,40 +149,5 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<script>
-    function konfirmasiLogout() {
-        if (confirm("Apakah Anda yakin ingin keluar?")) {
-            window.location.href = "/login";
-        }
-    }
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function() {
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Fitur pencarian
-    document.getElementById('searchInput').addEventListener('keyup', function() {
-        const filter = this.value.toLowerCase();
-        const rows = document.querySelectorAll('tbody tr');
-
-        rows.forEach(row => {
-            const cells = row.getElementsByTagName('td');
-            let found = false;
-
-            for (let i = 0; i < cells.length; i++) {
-                if (cells[i].textContent.toLowerCase().includes(filter)) {
-                    found = true;
-                    break;
-                }
-            }
-
-            row.style.display = found ? '' : 'none';
-        });
-    });
-</script>
 </body>
 </html>

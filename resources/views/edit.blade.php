@@ -14,6 +14,10 @@
 </head>
 <body>
     <div class="container py-5">
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="{{ route('data.index') }}" class="btn btn-secondary">Kembali</a>
+        </div>
         <div class="card">
             <div class="card-header">
                 <h1 class="my-4">Edit Data Siswa</h1>
@@ -95,10 +99,7 @@
                 </form>
             </div>
         </div>
-        <div class="d-flex justify-content-end"  style="margin-top: 20px;">
-            <button type="submit" class="btn btn-primary">Update</button>
-            <a href="{{ route('data.index') }}" class="btn btn-secondary">Kembali</a>
-        </div>
+        
     </div>
 </body>
 </html>

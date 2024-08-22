@@ -72,8 +72,8 @@
         <h1 class="text-center mb-4 text-shadow">Form Mutasi Siswa</h1>
         <form class="row g-3" method="post" action="{{ route('mutasi.store') }}">
             @csrf
-            <div class="col-lg-6 col-md-12">
-                <h4 class="text-center text-shadow">Data Siswa</h4>
+            <div class="col-lg-12">
+                <h4 class="text-left text-shadow">Data Siswa</h4>
 
                 <label for="tanggal" class="form-label text-shadow">Tanggal</label>
                 <input type="date" class="form-control" id="tanggal" name="tanggal">
@@ -101,8 +101,8 @@
                 <input type="text" class="form-control" id="kelas" name="kelas">
             </div>
             
-            <div class="col-lg-6 col-md-12 mt-4">
-                <h4 class="text-center text-shadow">Data Sekolah Asal</h4>
+            <div class="col-lg-12">
+                <h4 class="text-left text-shadow">Data Sekolah Asal</h4>
 
                 <label for="asal_sekolah" class="form-label text-shadow">Nama Sekolah Asal</label>
                 <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah">
@@ -120,8 +120,8 @@
                 <input type="text" class="form-control" id="kabupaten" name="kabupaten">
             </div>
             
-            <div class="col-lg-6 col-md-12 mt-4">
-                <h4 class="text-center text-shadow">Data Sekolah Tujuan</h4>
+            <div class="col-lg-12">
+                <h4 class="text-left text-shadow">Data Sekolah Tujuan</h4>
 
                 <label for="nama_sekolah_baru" class="form-label text-shadow">Nama Sekolah Baru</label>
                 <input type="text" class="form-control" id="nama_sekolah_baru" name="nama_sekolah_baru">
@@ -134,22 +134,21 @@
 
                 <label for="prov_sekolah_tujuan" class="form-label text-shadow">Provinsi Sekolah Tujuan</label>
                 <input type="text" class="form-control" id="prov_sekolah_tujuan" name="prov_sekolah_tujuan">
+
+                <label for="keterangan" class="form-label text-shadow">Keterangan</label>
+                <input type="text" class="form-control" id="keterangan" name="keterangan">
             </div>
             
-            <div class="col-lg-6 col-md-12 mt-4">
-                <h4 class="text-center text-shadow">Kontak yang bisa dihubungi</h4>
+            <div class="col-lg-12">
+                <h4 class="text-left text-shadow">Kontak yang bisa dihubungi</h4>
 
                 <label for="no_wa" class="form-label text-shadow">Nomor Telepon/WhatsApp</label>
                 <input type="text" class="form-control" id="no_wa" name="no_wa">
 
                 <label for="email" class="form-label text-shadow">Alamat Email</label>
                 <input type="email" class="form-control" id="email" name="email">
-                <div class="col-12 mt-4">
-                    <label for="keterangan" class="form-label text-shadow">Keterangan</label>
-                    <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
-                </div>
             </div>
-            <div class="col-lg-6 col-md-12 mt-4">
+            <div class="col-lg-12">
                 <button type="submit" class="btn btn-primary">Kirim</button>
             </div>
             
