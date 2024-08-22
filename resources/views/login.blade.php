@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="slide navbar style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
+    <script src="js/home.js"> </script>
 </head>
 
 <body>
@@ -30,20 +31,7 @@
     </div>
     </div>
     <script>
-        (function() {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation');
-            Array.prototype.slice.call(forms)
-                .forEach(function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
+
     </script>
 </body>
 

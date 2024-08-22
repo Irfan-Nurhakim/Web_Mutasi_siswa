@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="css/home.css" rel="stylesheet">
-
+    <script src="js/home.js"> </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -33,14 +33,6 @@
                 </ul>
             </div>
         </div>
-        <script>
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', function() {
-                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-        </script>
     </nav>
 
     <div class="container mt-2">
@@ -70,7 +62,7 @@
 
     <div class="container rounded mt-4 p-4" style="background-color: rgba(0, 0, 0, 0.1);">
         <h1 class="text-center mb-4 text-shadow">Form Mutasi Siswa</h1>
-        <form class="row g-3" method="post" action="{{ route('mutasi.store') }}">
+        <form class="row g-3 overflow-auto" style="max-height: 600px;" method="post" action="{{ route('mutasi.store') }}">
             @csrf
             <div class="col-lg-12">
                 <h4 class="text-left text-shadow">Data Siswa</h4>
@@ -148,11 +140,9 @@
                 <label for="email" class="form-label text-shadow">Alamat Email</label>
                 <input type="email" class="form-control" id="email" name="email">
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-12 mt-3">
                 <button type="submit" class="btn btn-primary">Kirim</button>
             </div>
-            
-            
         </form>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="filter: drop-shadow(0 -4px 6px rgba(0, 0, 0, 0.1));">

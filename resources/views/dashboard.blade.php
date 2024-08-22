@@ -69,9 +69,7 @@
                 <div class="container-fluid">
                     <div class="row mt-3">
                         <div class="col-md-6 mb-4">
-                            <div >
-                                <h1> <br> Dashboard</h1>
-                            </div>
+                            <h1 class="my-2"> <br> Dashboard</h1>
                         </div>
                         <div class="col-12 col-md-3 mb-4">
                             <div class="card bg-primary text-white">
@@ -109,7 +107,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>const mutasiChart = new Chart( document.getElementById('mutasiChart'),config);</script> // Membuat grafik
 </body>
 
 </html>

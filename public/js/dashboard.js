@@ -1,17 +1,18 @@
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function() {
-        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
     });
-});
 
-function konfirmasiLogout() {
-    if (confirm("Apakah Anda yakin ingin keluar?")) {
-        document.getElementById('logout-form').submit();
+    function konfirmasiLogout() {
+        if (confirm("Apakah Anda yakin ingin keluar?")) {
+            document.getElementById('logout-form').submit();
+        }
     }
-}
 
-        // Data untuk grafik (ganti dengan data sebenarnya dari backend)
+    // Data untuk grafik (ganti dengan data sebenarnya dari backend)
+    document.addEventListener('DOMContentLoaded', function() {
         const mutasiData = {
             labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober',
                 'November', 'Desember'
@@ -30,6 +31,7 @@ function konfirmasiLogout() {
                 borderWidth: 1
             }]
         };
+
         // Konfigurasi grafik
         const config = {
             type: 'bar',
@@ -52,3 +54,6 @@ function konfirmasiLogout() {
                 }
             }
         };
+
+        const mutasiChart = new Chart(document.getElementById('mutasiChart'), config);
+    });
