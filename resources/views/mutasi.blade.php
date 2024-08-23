@@ -67,7 +67,7 @@
             <div class="col-lg-12">
                 <h4 class="text-left text-shadow">Data Siswa</h4>
 
-                <label for="tanggal" class="form-label text-shadow">Tanggal</label>
+                <label for="tanggal" class="form-label text-shadow">Tanggal Pengisian Form</label>
                 <input type="date" class="form-control" id="tanggal" name="tanggal">
 
                 <label for="nama_siswa" class="form-label text-shadow">Nama Siswa</label>
@@ -132,7 +132,7 @@
             </div>
             
             <div class="col-lg-12">
-                <h4 class="text-left text-shadow">Kontak yang bisa dihubungi</h4>
+                <h4 class="text-left text-shadow">Kontak Yang Dapat Dihubungi</h4>
 
                 <label for="no_wa" class="form-label text-shadow">Nomor Telepon/WhatsApp</label>
                 <input type="text" class="form-control" id="no_wa" name="no_wa">

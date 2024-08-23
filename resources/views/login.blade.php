@@ -24,7 +24,8 @@
                 <label for="chk" aria-hidden="true">Login</label>
                 <input type="email" name="username" placeholder="Email@example.com" required=""
                     style="font-size: 16px;">
-                <input type="password" name="password" placeholder="Password" required="" style="font-size: 16px;">
+                <input type="password" name="password" placeholder="Password" required="" 
+                    style="font-size: 16px;">
                 <button type="submit">Masuk</button>
             </form>
         </div>
