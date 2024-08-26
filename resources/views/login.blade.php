@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Slide Navbar</title>
+    <title>E Mutasi</title>
     <link rel="stylesheet" type="text/css" href="slide navbar style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
