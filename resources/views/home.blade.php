@@ -74,7 +74,7 @@
                             </li>
                             <li>
                                 <i class="bi bi-envelope-fill text-danger"></i> Email
-                                <p>- </p>
+                                <p> disdikkabgarut@gmail.com </p>
                             </li>
                         </ul>
                     </div>
@@ -83,7 +83,7 @@
                         <ul class="list-unstyled">
                             <li><p class="text-dark"><i class="bi bi-instagram text-danger"></i> disdikkabgarut</p></li>
                             <li><p class="text-dark"><i class="bi bi-facebook text-danger"></i> DINAS Pendidikan Kab.garut</p></li>
-                            <li><p class="text-dark"><i class="bi bi-whatsapp text-danger"></i> -</p></li>
+                            <li><p class="text-dark"><i class="bi bi-whatsapp text-danger"></i> <a href="https://wa.me/6285179911392" target="_blank">085179911392</a></p></li>
                         </ul>
                     </div>
                     <div class="col-md-1 offset">
