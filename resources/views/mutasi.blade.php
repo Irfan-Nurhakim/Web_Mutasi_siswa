@@ -68,77 +68,77 @@
                 <h4 class="text-left text-shadow">Data Siswa</h4>
 
                 <label for="tanggal" class="form-label text-shadow">Tanggal Pengisian Form</label>
-                <input type="date" class="form-control" id="tanggal" name="tanggal">
+                <input type="date" class="form-control" id="tanggal" name="tanggal" required>
 
                 <label for="nama_siswa" class="form-label text-shadow">Nama Siswa</label>
-                <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" placeholder="Contoh Nama Lengkap">
+                <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" placeholder="Nama Lengkap" required>
 
                 <label for="ttl" class="form-label text-shadow">Tempat, Tanggal Lahir</label>
-                <input type="text" class="form-control" id="ttl" name="ttl" placeholder="Contoh Garut, 01 januari 2024">
+                <input type="text" class="form-control" id="ttl" name="ttl" placeholder="Contoh Garut, 01 januari 2024" required>
 
                 <label for="jenis_kelamin" class="form-label text-shadow">Jenis Kelamin</label>
-                <select class="form-select" id="jenis_kelamin" name="jenis_kelamin">
+                <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
                     <option selected>Pilih jenis kelamin</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
 
                 <label for="nis" class="form-label text-shadow">NIS (Nomor Induk Siswa)</label>
-                <input type="text" class="form-control" id="nis" name="nis">
+                <input type="text" class="form-control" id="nis" name="nis" required>
 
                 <label for="nisn" class="form-label text-shadow">NISN (Nomor Induk Siswa Nasional)</label>
-                <input type="text" class="form-control" id="nisn" name="nisn">
+                <input type="text" class="form-control" id="nisn" name="nisn" required>
 
                 <label for="kelas" class="form-label text-shadow">Kelas</label>
-                <input type="text" class="form-control" id="kelas" name="kelas">
+                <input type="text" class="form-control" id="kelas" name="kelas" required>
             </div>
             
             <div class="col-lg-12">
                 <h4 class="text-left text-shadow">Data Sekolah Asal</h4>
 
                 <label for="asal_sekolah" class="form-label text-shadow">Nama Sekolah Asal</label>
-                <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah">
+                <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" required>
 
                 <label for="no_surat_sekolah" class="form-label text-shadow">Nomor Surat dari Sekolah</label>
-                <input type="text" class="form-control" id="no_surat_sekolah" name="no_surat_sekolah">
+                <input type="text" class="form-control" id="no_surat_sekolah" name="no_surat_sekolah" required>
 
                 <label for="ttl_surat_dari_sekolah" class="form-label text-shadow">Tanggal Surat dari Sekolah</label>
-                <input type="date" class="form-control" id="ttl_surat_dari_sekolah" name="ttl_surat_dari_sekolah">
+                <input type="date" class="form-control" id="ttl_surat_dari_sekolah" name="ttl_surat_dari_sekolah" required>
 
                 <label for="kecamatan" class="form-label text-shadow">Kecamatan</label>
-                <input type="text" class="form-control" id="kecamatan" name="kecamatan">
+                <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
 
                 <label for="kabupaten" class="form-label text-shadow">Kabupaten</label>
-                <input type="text" class="form-control" id="kabupaten" name="kabupaten">
+                <input type="text" class="form-control" id="kabupaten" name="kabupaten" required>
             </div>
             
             <div class="col-lg-12">
                 <h4 class="text-left text-shadow">Data Sekolah Tujuan</h4>
 
                 <label for="nama_sekolah_baru" class="form-label text-shadow">Nama Sekolah Baru</label>
-                <input type="text" class="form-control" id="nama_sekolah_baru" name="nama_sekolah_baru">
+                <input type="text" class="form-control" id="nama_sekolah_baru" name="nama_sekolah_baru" required>
 
                 <label for="kec_sekolah_tujuan" class="form-label text-shadow">Kecamatan Sekolah Tujuan</label>
-                <input type="text" class="form-control" id="kec_sekolah_tujuan" name="kec_sekolah_tujuan">
+                <input type="text" class="form-control" id="kec_sekolah_tujuan" name="kec_sekolah_tujuan" required>
 
                 <label for="kab_kota_sekolah_tujuan" class="form-label text-shadow">Kabupaten/Kota Sekolah Tujuan</label>
-                <input type="text" class="form-control" id="kab_kota_sekolah_tujuan" name="kab_kota_sekolah_tujuan">
+                <input type="text" class="form-control" id="kab_kota_sekolah_tujuan" name="kab_kota_sekolah_tujuan" required>
 
                 <label for="prov_sekolah_tujuan" class="form-label text-shadow">Provinsi Sekolah Tujuan</label>
-                <input type="text" class="form-control" id="prov_sekolah_tujuan" name="prov_sekolah_tujuan">
+                <input type="text" class="form-control" id="prov_sekolah_tujuan" name="prov_sekolah_tujuan" required>
 
                 <label for="keterangan" class="form-label text-shadow">Keterangan</label>
-                <input type="text" class="form-control" id="keterangan" name="keterangan">
+                <input type="text" class="form-control" id="keterangan" name="keterangan" placeholder="Masukan Alasan Perpindahan Sekolah" required>
             </div>
             
             <div class="col-lg-12">
                 <h4 class="text-left text-shadow">Kontak Yang Dapat Dihubungi</h4>
 
                 <label for="no_wa" class="form-label text-shadow">Nomor Telepon/WhatsApp</label>
-                <input type="text" class="form-control" id="no_wa" name="no_wa">
+                <input type="text" class="form-control" id="no_wa" name="no_wa" required pattern="[0-9]{10,12}" title="Nomor telepon harus terdiri dari 10-12 digit angka">
 
                 <label for="email" class="form-label text-shadow">Alamat Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="col-lg-12 mt-3">
                 <button type="submit" class="btn btn-primary">Kirim</button>

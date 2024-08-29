@@ -14,10 +14,6 @@
 </head>
 <body>
     <div class="container py-5">
-        <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary">Update</button>
-            <a href="{{ route('data.index') }}" class="btn btn-secondary">Kembali</a>
-        </div>
         <div class="card">
             <div class="card-header">
                 <h1 class="my-4">Edit Data Siswa</h1>
@@ -29,7 +25,7 @@
                         <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" value="{{ $siswa->nama_siswa }}" required>
                     </div>
                     <div class="mb-3">
-                        <label for="ttl" class="form-label">Tempat Tanggal Lahir</label>
+                        <label for="ttl" class="form-label">TTL</label>
                         <input type="text" class="form-control" id="ttl" name="ttl" value="{{ $siswa->ttl }}" required>
                     </div>
                     <div class="mb-3">
@@ -46,7 +42,10 @@
                     </div>
                     <div class="mb-3">
                         <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                        <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin" value="{{ $siswa->jenis_kelamin }}" required>
+                        <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+                            <option value="1" {{ $siswa->jenis_kelamin == 1 ? 'selected' : '' }}>Laki-laki</option>
+                            <option value="2" {{ $siswa->jenis_kelamin == 2 ? 'selected' : '' }}>Perempuan</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="nis" class="form-label">NIS</label>
@@ -81,10 +80,6 @@
                         <input type="text" class="form-control" id="kab_kota_sekolah_tujuan" name="kab_kota_sekolah_tujuan" value="{{ $siswa->kab_kota_sekolah_tujuan }}" required>
                     </div>
                     <div class="mb-3">
-                        <label for="prov_sekolah_tujuan" class="form-label">Provinsi Sekolah Tujuan</label>
-                        <input type="text" class="form-control" id="prov_sekolah_tujuan" name="prov_sekolah_tujuan" value="{{ $siswa->prov_sekolah_tujuan }}" required>
-                    </div>
-                    <div class="mb-3">
                         <label for="no_wa" class="form-label">No.Telp</label>
                         <input type="text" class="form-control" id="no_wa" name="no_wa" value="{{ $siswa->no_wa }}" required>
                     </div>
@@ -96,6 +91,13 @@
                         <label for="keterangan" class="form-label">Keterangan</label>
                         <textarea class="form-control" id="keterangan" name="keterangan" rows="3">{{ $siswa->keterangan }}</textarea>
                     </div>
+                    <button type="submit" class="btn btn-primary" onclick="return confirm('Apakah Anda yakin ingin mengupdate data ini?')">Update</button>
+                    <a href="{{ route('data.index') }}" class="btn btn-secondary">Kembali</a>
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>
