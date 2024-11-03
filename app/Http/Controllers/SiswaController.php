@@ -68,7 +68,7 @@ class SiswaController extends Controller
         $table = $section->addTable();
         $table->addRow();
         $cell1 = $table->addCell(2000);
-        $cell1->addImage($logoPath, ['width'=>90,'height'=>62,'alignment'=>\PhpOffice\PhpWord\SimpleType\Jc::CENTER]);
+        $cell1->addImage($logoPath, ['height'=>55,'alignment'=>\PhpOffice\PhpWord\SimpleType\Jc::CENTER]);
         $cell2 = $table->addCell(6000);
         $cell2->addText('PEMERINTAH KABUPATEN GARUT', ['bold'=>true,'size'=>12,'name'=>'Times New Roman'], ['align'=>'center','spaceAfter'=>0]);
         $cell2->addText('DINAS PENDIDIKAN', ['bold'=>true,'size'=>16,'name'=>'Times New Roman'], ['align'=>'center','spaceAfter'=>0]);
