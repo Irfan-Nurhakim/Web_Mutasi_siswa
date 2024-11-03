@@ -2,7 +2,7 @@ body{
 	background-image: url('/storage/assets/disdik.jpg');
 	background-size: cover; /* Ukuran gambar latar belakang */
 	background-position: right 30%;
-	background-repeat: no-repeat; /* Jangan ulangi gambar */
+	background-repeat: no-repeat; 
 	backdrop-filter: blur(5px); /* Efek blur */
     background-size: cover; 
     height: 100vh; 
@@ -15,9 +15,9 @@ body{
 }
 .main{
 	width: 500px;
-	max-width: 400px;
+	/* max-width: 400px; */
 	height: 500px;
-	max-height: 500px;
+	/* max-height: 500px; */
 	overflow: hidden;
     border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
@@ -73,7 +73,7 @@ button{
 	outline: none;
 	border: none;
 	border-radius: 5px;
-	transition: .2s ease-in;
+	transition: .5s ease-in;
 	cursor: pointer;
 }
 button:hover{
@@ -101,3 +101,59 @@ button:hover{
 	transform: scale(.6);
 }
 
+.img-rounded {
+	max-width: 800px; 
+	height: 300px; 
+	display: block; 
+	margin: auto;
+}
+
+.username, .password {
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#chk:checked ~ .login{
+		transform: translateY(-630px);
+	}
+	.img-rounded {
+	width: 150% !important; 
+	height: 150% !important; 
+}
+
+	.main {
+		top: 40%;
+		position: relative;
+		margin-top: 50%;
+		width: 70%;
+		height: 150%;
+	}
+	.img-rounded {
+		width: 500px;
+		height: 500px;
+	}
+	.signup {
+		padding-top: 20px;
+	}
+	.login {
+		padding-bottom: 20%;
+		margin-bottom: 20%;
+	}
+	.teks-login {
+		font-size: 7rem;
+	}
+	.username, .password{
+		padding: 5%;
+		font-size: 2rem;
+		
+	}
+
+	button {
+		padding: 5%;
+		padding-bottom: 8%;
+		font-size: 2rem;
+		/* background-color: yellow; */
+	}
+	
+}

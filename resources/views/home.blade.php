@@ -10,13 +10,18 @@
         <script src="js/home.js"> </script>
     </head>
     <body>
+        <!-- Navigasi -->
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
-                <img src="{{ asset('storage/assets/logo.png') }}" height="60" width="90" class="d-inline-block align-top me-2">
+                <!-- Logo -->
+                <img src="{{ asset('storage/assets/logo.png') }}" height="60"  class="d-inline-block align-top me-2">
+                <!-- Nama aplikasi -->
                 <a class="navbar-brand" href="/"><strong>E Mutasi Siswa</strong></a>
+                <!-- Tombol navigasi -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Menu navigasi -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -26,25 +31,29 @@
                             <a class="nav-link rounded" href="/mutasi"><i class="bi bi-journal-bookmark"> </i><strong>Mutasi</strong></a>
                         </li>
                     </ul>
+                    <!-- Menu navigasi untuk login -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link rounded" href="/login"><i class="bi bi-box-arrow-right"> </i><strong>Login</strong></a>
+                            <a class="nav-link rounded" href="/login"><i class="bi bi-door-open-fill" style="font-size: 25px;"></i><strong>Login</strong></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <!-- Kartu informasi -->
         <div class="card mt-4 link-dark container" style="background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
             <div>
                 <div >
                     <div >
+                        <!-- Gambar -->
                         <img src="{{ asset('storage/assets/disdik.jpg') }}" class="d-block w-100" alt="Slide 1" style="height: auto; width: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Kartu informasi tentang E-Mutasi -->
         <div class="card container mt-3" style="background-color: rgba(0, 0, 0, 0.1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
             <div class="card-body rounded text-center text-black">
                 <h5 class="card-title">E Mutasi Siswa</h5>
@@ -53,9 +62,10 @@
             </div>
         </div>
     
-        <footer class="py-4 mt-5">
+        <!-- Footer -->
+        <footer class="py-4 mt-5 ">
             <div class="container">
-                <div class="row">
+                <div class="row d-flex justify-content-around">
                     <div class="col-md-3">
                         <h6>Profil Dinas Pendidikan Garut</h6>
                         <ul class="list-unstyled">
@@ -78,23 +88,24 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-3 offset-md-2">
+                    <div class="col-md-3 ">
                         <h6>Media Sosial</h6>
                         <ul class="list-unstyled">
-                            <li><p class="text-dark"><i class="bi bi-instagram text-danger"></i> disdikkabgarut</p></li>
-                            <li><p class="text-dark"><i class="bi bi-facebook text-danger"></i> DINAS Pendidikan Kab.garut</p></li>
-                            <li><p class="text-dark"><i class="bi bi-whatsapp text-danger"></i> <a href="https://wa.me/6285179911392" target="_blank">085179911392</a></p></li>
+                            <li><p class="text-dark"><i class="bi bi-instagram text-danger"></i><a href="https://www.instagram.com/disdikkabgarut/" target="_blank"> disdikkabgarut</a></p></li>
+                            <li><p class="text-dark"><i class="bi bi-facebook text-danger"></i><a href="https://www.instagram.com/disdikkabgarut/" target="_blank"> DINAS Pendidikan Kab.garut</a></p></li>
+                            <li><p class="text-dark"><i class="bi bi-whatsapp text-danger"></i> <a href="https://wa.me/6285179911392" target="_blank"> 085179911392</a></p></li>
+                            <li><p class="text-dark"><i class="bi bi-youtube text-danger"></i> <a href="https://www.youtube.com/channel/UChk1aNB49e0OoAqKn9qZ0-g" target="_blank"> Disdik Garutt</a></p></li>
                         </ul>
                     </div>
-                    <div class="col-md-1 offset">
-                        <div class="mt-3">
-                            <img src="{{ asset('storage/assets/logo.png') }}" alt="Link Image" class="img-fluid rounded" style="max-width: 800px; height: 300px;">
-                        </div>
+                    <div class="col-md-3">
+                        <h6></h6>
+                        <ul class="list-unstyled">
+                        <li style="padding: -10px;" class="pe-5"><img src="{{ asset('storage/assets/logo.png') }}" alt="Link Image" class="img-fluid" style="max-width: 600px; height: 200px;"></li>
                     </div>
                 </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160"><path fill="#e3f2fd" fill-opacity="1" d="M0,32L60,42.7C120,53,240,75,360,72C480,69,600,43,720,45.3C840,48,960,80,1080,80C1200,80,1320,48,1380,32L1440,16L1440,160L1380,160C1320,160,1200,160,1080,160C960,160,840,160,720,160C600,160,480,160,360,160C240,160,120,160,60,160L0,160Z"></path></svg>
         </footer>
+        <!-- Menghubungkan JavaScript Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <img src="{{ asset('storage/assets/logo.png') }}" height="60" width="90"
+            <img src="{{ asset('storage/assets/logo.png') }}" height="60"
                 class="d-inline-block align-top me-2">
             <span class="navbar-brand" style="color: #000 !important;"><strong>E Mutasi Siswa</strong></span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -33,7 +33,7 @@
                     </li>
                     <li class="nav-item me-3">
                         <a class="nav-link" href="#" onclick="konfirmasiLogout()">
-                            <i class="bi bi-door-open" style="font-size: 25px;"></i> <strong>Logout</strong>
+                            <i class="bi bi-door-closed" style="font-size: 25px;"></i> <strong>Logout</strong>
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

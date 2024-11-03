@@ -10,22 +10,19 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="main tests">
         <input type="checkbox" id="chk" aria-hidden="true">
         <div class="signup">
             <label for="chk" aria-hidden="true">
-                <img src="{{ asset('storage/assets/logo.png') }}" alt="Link Image" class="img-rounded"
-                    style="max-width: 800px; height: 300px; display: block; margin: auto;">
+                <img src="{{ asset('storage/assets/logo.png') }}" alt="Link Image" class="img-rounded">
             </label>
         </div>
         <div class="login">
             <form action="/login" method="POST">
                 @csrf
-                <label for="chk" aria-hidden="true">Login</label>
-                <input type="email" name="username" placeholder="Email@example.com" required=""
-                    style="font-size: 16px;">
-                <input type="password" name="password" placeholder="Password" required="" 
-                    style="font-size: 16px;">
+                <label for="chk" aria-hidden="true" class="teks-login">Login</label>
+                <input type="email" name="username" placeholder="Email@example.com" required="" class="username">
+                <input type="password" name="password" placeholder="Password" required="" class="password">
                 <button type="submit">Masuk</button>
             </form>
         </div>
