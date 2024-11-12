@@ -99,7 +99,7 @@
                     <!-- Input kabupaten/kota sekolah tujuan -->
                     <div class="mb-3">
                         <label for="no_wa" class="form-label">No.Telp</label>
-                        <input type="text" class="form-control" id="no_wa" name="no_wa" value="{{ $siswa->no_wa }}" required>
+                        <input type="number" class="form-control" id="no_wa" name="no_wa" value="{{ $siswa->no_wa }}" required>
                     </div>
                     <!-- Input no telp -->
                     <div class="mb-3">

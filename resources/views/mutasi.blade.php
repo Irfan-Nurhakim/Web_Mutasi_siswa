@@ -169,7 +169,7 @@
                 <!-- Judul untuk kontak yang dapat dihubungi -->
 
                 <label for="no_wa" class="form-label text-shadow">Nomor Telepon/WhatsApp</label>
-                <input type="text" class="form-control" id="no_wa" name="no_wa" placeholder="085123xxxxx" required pattern="[0-9]{10,12}" title="Nomor telepon harus terdiri dari 10-12 digit angka">
+                <input type="number" class="form-control" id="no_wa" name="no_wa" placeholder="085123xxxxx" required pattern="[0-9]{10,12}" title="Nomor telepon harus terdiri dari 10-12 digit angka">
                 <!-- Input untuk nomor telepon/WhatsApp -->
 
                 <label for="email" class="form-label text-shadow">Alamat Email</label>

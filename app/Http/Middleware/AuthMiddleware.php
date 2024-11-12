@@ -16,7 +16,6 @@ class AuthMiddleware
             Log::info('Unauthorized access');
             return redirect('/login')->with('error', 'Anda tidak memiliki akses ke dashboard.');
         }
-
         // jika user sudah login dan mencoba mengakses halaman login, mutasi, atau home
         // redirect ke dashboard
         if ($user && ($request->is('login') || $request->is('mutasi') || $request->is('/'))) {

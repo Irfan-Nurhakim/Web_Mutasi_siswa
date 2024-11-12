@@ -22,10 +22,6 @@ Route::get('/', function () {
 });
 
 // Halaman Mutasi
-
-// Route::get('/mutasi', function () {
-//     return view('mutasi');
-// });
 Route::get('/mutasi', [MutasiController::class, 'index'])->name('mutasi.index');
 Route::post('/mutasi', [MutasiController::class, 'store'])->name('mutasi.store');
 
