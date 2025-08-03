@@ -21,6 +21,8 @@ body {
 .nav-link.active::after {
     width: 100%; /* Garis bawah penuh saat hover atau aktif */
     right: 0; /* Posisi garis bawah */
+    background-color: white !important; /* Warna latar belakang tombol saat ditekan */
+    color: #000000 !important; /* Warna teks tombol saat ditekan */
 }
 .btn-primary {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transisi untuk perubahan warna latar belakang dan teks */
@@ -33,7 +35,7 @@ body {
     transition: all 0.3s ease; /* Transisi untuk semua perubahan pada nav-link */
 }
 .nav-link:hover, .nav-link:focus, .nav-link.active {
-    background-color: rgba(0, 0, 0, 0.1); /* Warna latar belakang saat hover, fokus, atau aktif */
+    background-color: rgb(242, 238, 238); /* Warna latar belakang saat hover, fokus, atau aktif */
     transform: scale(1.05); /* Efek pembesaran saat hover */
 }
 @media (max-width: 768px) {
@@ -56,7 +58,7 @@ body {
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
-    background: #bae4f0;  
+    background: #038baa;  
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 .navbar-brand {
@@ -67,14 +69,14 @@ body {
 }
 /* Footer */
 footer {
-    background-color: #e3f2fd; /* Background putih semu biru untuk footer */
-    color: #000000; /* Warna teks footer */
+    background-color: #021e3c; /* Background  untuk footer */
+    color: #f7f2f2; /* Warna teks footer */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan shadow ke footer */
 }
 footer a {
     color: #000000; /* Warna tautan footer */
 }
 footer a:hover {
-    color: #0056b3; /* Warna tautan footer saat hover */
+    color: #038baa; /* Warna tautan footer saat hover */
 }
 

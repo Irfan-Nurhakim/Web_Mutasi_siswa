@@ -72,7 +72,7 @@
                             <li>
                                 <i class="bi bi-geo-alt-fill text-danger"></i> Alamat
                                 <p> Jl. Pembangunan No.179, Sukagalih, Kec. Tarogong Kidul, Kabupaten Garut, Jawa Barat 44151 <br>
-                                <a href="https://maps.app.goo.gl/jni8F8WMozbFMrSB6">Lihat Lokasi di Peta</a></p>
+                                <a href="https://maps.app.goo.gl/jni8F8WMozbFMrSB6" style="color: white;">Lihat Lokasi di Peta</a></p>
                             </li>
                             <li>
                                 <i class="bi bi-clock-fill text-danger"></i> Jam Kerja
@@ -91,10 +91,10 @@
                     <div class="col-md-3 ">
                         <h6>Media Sosial</h6>
                         <ul class="list-unstyled">
-                            <li><p class="text-dark"><i class="bi bi-instagram text-danger"></i><a href="https://www.instagram.com/disdikkabgarut/" target="_blank"> disdikkabgarut</a></p></li>
-                            <li><p class="text-dark"><i class="bi bi-facebook text-danger"></i><a href="https://www.instagram.com/disdikkabgarut/" target="_blank"> DINAS Pendidikan Kab.garut</a></p></li>
-                            <li><p class="text-dark"><i class="bi bi-whatsapp text-danger"></i> <a href="https://wa.me/6285179911392" target="_blank"> 085179911392</a></p></li>
-                            <li><p class="text-dark"><i class="bi bi-youtube text-danger"></i> <a href="https://www.youtube.com/channel/UChk1aNB49e0OoAqKn9qZ0-g" target="_blank"> Disdik Garutt</a></p></li>
+                            <li><p><i class="bi bi-instagram text-danger"></i><a href="https://www.instagram.com/disdikkabgarut/" target="_blank"> disdikkabgarut</a></p></li>
+                            <li><p><i class="bi bi-facebook text-danger"></i><a href="https://www.instagram.com/disdikkabgarut/" target="_blank"> DINAS Pendidikan Kab.garut</a></p></li>
+                            <li><p><i class="bi bi-whatsapp text-danger"></i> <a href="https://wa.me/6285179911392" target="_blank"> 085179911392</a></p></li>
+                            <li><p><i class="bi bi-youtube text-danger"></i> <a href="https://www.youtube.com/channel/UChk1aNB49e0OoAqKn9qZ0-g" target="_blank"> Disdik Garutt</a></p></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
